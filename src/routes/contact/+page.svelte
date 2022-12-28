@@ -1,208 +1,156 @@
-<script lang="ts">
-	// import Counter from './Counter.svelte';
-	import welcome from '$lib/images/hoai_phongggg.jpg';
-	import { Col, Container, Row } from 'sveltestrap';
-	import {
-    Button,
-    Card,
-    CardBody,
-    CardFooter,
-    CardHeader,
-    CardSubtitle,
-    CardText,
-    CardTitle
-  } from 'sveltestrap';
-  	import { Accordion, AccordionItem } from 'sveltestrap';
-	import { Table } from 'sveltestrap';
-	import { TabContent, TabPane } from 'sveltestrap';
-	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
+<div class="container">  
+	<form id="contact" action="" method="post">
+	<h3>Liên hệ</h3>
+	<h4>Liên hệ với chúng tôi ngay hôm nay và nhận được trả lời trong 24 giờ!</h4>
+	<fieldset>
+		<input placeholder="Your name" type="text" tabindex="1" required autofocus>
+	</fieldset>
+	<fieldset>
+		<input placeholder="Your Email Address" type="email" tabindex="2" required>
+	</fieldset>
+	<fieldset>
+		<input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+	</fieldset>
+	<fieldset>
+		<input placeholder="Your Web Site starts with http://" type="url" tabindex="4" required>
+	</fieldset>
+	<fieldset>
+		<textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+	</fieldset>
+	<fieldset>
+		<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+	</fieldset>
+	</form>
 	
-</script>
-<svelte:head>
-	<title>Contact</title>
-	<meta name="description" content="Contact this app" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-</svelte:head>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7838.826796156848!2d106.70963182114866!3d10.779616074631804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4dc3c6e92b%3A0x6709b909af6e54b4!2zVmluaG9tZXMgR29sZGVuIFJpdmVyIFPDoGkgR8OybiwgQuG6v24gTmdow6ksIFF14bqtbiAxLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1672216884525!5m2!1svi!2s" width="100%" height="450" style="border:0; margin: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<!-- <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome} alt="Welcome" />
-			</picture>
-		</span>
-
-		 to your new<br />SvelteKit app -->
-	<!-- </h1> -->
-
-	<!-- <h2> -->
-		<!-- try editing <strong>src/routes/+page.svelte</strong> -->
-
-	<!-- </h2> -->
-
-	<!-- <Counter /> -->
-<!-- </section> --> 
-<!-- <style>
-	/* section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	} */
-
-	/* h1 {
-		width: 100%;
-	} */
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style> -->
-
-<Container class="container">
-	<TabContent pills>
-		<TabPane tabId="alpha" tab="Alpha" active>
-		  <img class="anh"
-			alt="Alpha Flight"
-			src="https://scontent.fhan4-1.fna.fbcdn.net/v/t1.6435-1/141750606_123140022995026_4710703695795988991_n.jpg?stp=dst-jpg_p320x320&_nc_cat=105&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6YC4A6edOf0AX9D5_lr&_nc_ht=scontent.fhan4-1.fna&oh=00_AfCEZms0HxW-hluZxT7Ow0_FbMFihiwicJpyL63l6Ae4Cw&oe=63D2297A"
-		  />
-		</TabPane>
-		<TabPane tabId="bravo" tab="Bravo">
-		  <img class="anh"
-			alt="Johnny Bravo"
-			src="https://scontent.fhan3-3.fna.fbcdn.net/v/t39.30808-6/306124172_1791075034591743_2564933685068885523_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_ohc=gk8gh9TMMNAAX_QfupU&_nc_ht=scontent.fhan3-3.fna&oh=00_AfD064PkQ6LLVkgTqkS64Gv06Vgy045DAVeD1Qx3JwwfsA&oe=63B08008"
-		  />
-		</TabPane>
-		<TabPane tabId="charlie" tab="Charlie">
-		  <img class="anh"
-			alt="Charlie Brown"
-			src="https://upload.wikimedia.org/wikipedia/en/2/22/Charlie_Brown.png"
-		  />
-		</TabPane>
-	  </TabContent>
-	<Table dark>
-		<thead>
-		  <tr>
-			<th>#</th>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Username</th>
-		  </tr>
-		</thead>
-		<tbody>
-		  <tr>
-			<th scope="row">1</th>
-			<td>Đặng</td>
-			<td>Thế</td>
-			<td>Phong</td>
-		  </tr>
-		  <tr>
-			<th scope="row">2</th>
-			<td>Võ</td>
-			<td>Đức</td>
-			<td>Tính</td>
-		  </tr>
-		  <tr>
-			<th scope="row">3</th>
-			<td>Đỗ</td>
-			<td>Hoàng</td>
-			<td>Thượng</td>
-		  </tr>
-		</tbody>
-	  </Table>
-	<Row>
-		<Col ><img src={welcome} alt="Welcome" /></Col>
-		<Col><img src={welcome} alt="Welcome" /></Col>
-    	<Col ><img src={welcome} alt="Welcome" /></Col>
-    	<Col ><img src={welcome} alt="Welcome" /></Col>
-	</Row>
-	<Row>
-		<Col ><img src={welcome} alt="Welcome" /></Col>
-		<Col ><img src={welcome} alt="Welcome" /></Col>
-    	<Col ><img src={welcome} alt="Welcome" /></Col>
-    	<Col ><img src={welcome} alt="Welcome" /></Col>
-	</Row>
-	<Row>
-		<Col ><img src={welcome} alt="Welcome" /></Col>
-		<Col ><img src={welcome} alt="Welcome" /></Col>
-    	<Col ><img src={welcome} alt="Welcome" /></Col>
-    	<Col ><img src={welcome} alt="Welcome" /></Col>
-	</Row>
-	<Card class="mb-3">
-		<CardHeader>
-		  <CardTitle>Võ Đức Tính (JungKook VN)</CardTitle>
-		</CardHeader>
-		<CardBody>
-		  <CardSubtitle><img src={welcome} alt="Welcome" /></CardSubtitle>
-		  <CardText>
-			Some quick example text to build on the card title and make up the bulk of
-			the card's content.
-		  </CardText>
-		  <Button>Button</Button>
-		</CardBody>
-		<CardFooter>
-			
-		</CardFooter>
-	  </Card>
-	  <!-- 
-
-	   -->
-	   <Accordion>
-		<AccordionItem active header="Home">Fallbrook</AccordionItem>
-		<AccordionItem header="School">
-		  <a href="#home">Buena Vista Elementary</a>
-		</AccordionItem>
-		<AccordionItem header="Library">UCSB Library</AccordionItem>
-	  </Accordion>
-	  <h4>Large</h4>
-	<Pagination size="lg" >
-  <PaginationItem>
-    <PaginationLink first href="#" />
-  </PaginationItem>
-  <PaginationItem>
-    <PaginationLink previous href="#" />
-  </PaginationItem>
-  <PaginationItem>
-    <PaginationLink href="#">1</PaginationLink>
-  </PaginationItem>
-  <PaginationItem>
-    <PaginationLink href="#">2</PaginationLink>
-  </PaginationItem>
-  <PaginationItem>
-    <PaginationLink href="#">3</PaginationLink>
-  </PaginationItem>
-  <PaginationItem>
-    <PaginationLink next href="#" />
-  </PaginationItem>
-  <PaginationItem>
-    <PaginationLink last href="#" />
-  </PaginationItem>
-</Pagination>
-</Container>
+	
+</div>
 
 <style>
-	img{
-		width: 100%;
-		height: 300px;
-		margin-bottom: 10px;
-	}
-	 /* .anh img {
-		width: 100%;
-		height: 500px;
+	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
-	} */
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+body {
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 12px;
+	line-height:30px;
+	color:#777;
+	background:#0CF;
+}
+
+.container {
+	/* max-width:400px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+.container iframe{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+	max-width:400px;
+}
+
+#contact h3 {
+	color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#0CF;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:#09C;
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+color:#888;
+}
+:-moz-placeholder {
+color:#888;
+}
+::-moz-placeholder {
+color:#888;
+}
+:-ms-input-placeholder {
+color:#888;
+}
 </style>
