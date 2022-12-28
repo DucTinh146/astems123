@@ -69,13 +69,13 @@
 				</div>
 				<div class="carousel-inner">
 				  <div class="carousel-item active">
-					<img src={hinh1} class="d-block w-100" alt="...">
+					<img src={hinh2} class="d-block w-100" alt="...">
 				  </div>
 				  <div class="carousel-item">
 					<img src={hinh2}  class="d-block w-100" alt="...">
 				  </div>
 				  <div class="carousel-item">
-					<img src={hinh3}  class="d-block w-100" alt="...">
+					<img src={hinh2}  class="d-block w-100" alt="...">
 				  </div>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

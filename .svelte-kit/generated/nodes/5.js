@@ -1,2 +1,3 @@
-export { default as component } from "../../../src/routes/sverdle/+page.svelte";
-export const server = true;
+import * as universal from "../../../src/routes/contact/+page.js";
+export { universal };
+export { default as component } from "../../../src/routes/contact/+page.svelte";
