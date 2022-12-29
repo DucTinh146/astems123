@@ -7,3 +7,6 @@ declare namespace App {
 	// interface PageData {}
 	// interface Platform {}
 }
+import * as $ from 'jquery';
+
+console.log($);

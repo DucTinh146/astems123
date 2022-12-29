@@ -1,201 +1,553 @@
-<div class="container">
-    <div class="well well-sm">
-        <strong>Display</strong>
-        <div class="btn-group">
-            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
-            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
-                class="glyphicon glyphicon-th"></span>Grid</a>
-        </div>
-    </div>
-    <div id="products" class="row list-group">
-        <div class="item  col-xs-4 col-lg-4">
-            <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">
-                        Product title</h4>
-                    <p class="group inner list-group-item-text">
-                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <p class="lead">
-                                $21.000</p>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item  col-xs-4 col-lg-4">
-            <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">
-                        Product title</h4>
-                    <p class="group inner list-group-item-text">
-                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <p class="lead">
-                                $21.000</p>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item  col-xs-4 col-lg-4">
-            <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">
-                        Product title</h4>
-                    <p class="group inner list-group-item-text">
-                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <p class="lead">
-                                $21.000</p>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item  col-xs-4 col-lg-4">
-            <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">
-                        Product title</h4>
-                    <p class="group inner list-group-item-text">
-                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <p class="lead">
-                                $21.000</p>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item  col-xs-4 col-lg-4">
-            <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">
-                        Product title</h4>
-                    <p class="group inner list-group-item-text">
-                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <p class="lead">
-                                $21.000</p>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item  col-xs-4 col-lg-4">
-            <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">
-                        Product title</h4>
-                    <p class="group inner list-group-item-text">
-                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <p class="lead">
-                                $21.000</p>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<script></script>
 
+<div class="container text-center">
+    <h1>Thông tin sản phẩm</h1>
+      <span>Create With <i class="zmdi zmdi-favorite red"></i>  By: <strong>Deni Kurniawan</strong> From: <i><a href="http://blog.wingerdstok.com" class="wsk-btn">Wingerdstok</a></i></span>
+    </div>
+    
+    
+    <div class="shell">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="wsk-cp-product">
+              <div class="wsk-cp-img">
+                <img src="https://file.hstatic.net/1000298775/file/dam_ren_den_dep4_88c53102d57748ef95c6bfd5ced7693e_grande.jpg" alt="Product" class="img-responsive" />
+              </div>
+              <div class="wsk-cp-text">
+                <div class="category">
+                  <span>Ethnic</span>
+                </div>
+                <div class="title-product">
+                  <h3>My face not my heart</h3>
+                </div>
+                <div class="description-prod">
+                  <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                </div>
+                <div class="card-footer">
+                  <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                  <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wsk-cp-product">
+              <div class="wsk-cp-img"><img src="https://file.hstatic.net/1000298775/file/dam_ren_den_dep4_88c53102d57748ef95c6bfd5ced7693e_grande.jpg" alt="Product" class="img-responsive" /></div>
+              <div class="wsk-cp-text">
+                <div class="category">
+                  <span>Introvert</span>
+                </div>
+                <div class="title-product">
+                  <h3>My face not my heart</h3>
+                </div>
+                <div class="description-prod">
+                  <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                </div>
+                <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wsk-cp-product">
+              <div class="wsk-cp-img"><img src="https://file.hstatic.net/1000298775/file/dam_ren_den_dep4_88c53102d57748ef95c6bfd5ced7693e_grande.jpg" alt="Product" class="img-responsive" /></div>
+              <div class="wsk-cp-text">
+                <div class="category">
+                  <span>Beauty</span>
+                </div>
+                <div class="title-product">
+                  <h3>My face not my heart</h3>
+                </div>
+                <div class="description-prod">
+                  <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                </div>
+                <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wsk-cp-product">
+              <div class="wsk-cp-img"><img src="https://file.hstatic.net/1000298775/file/dam_ren_den_dep4_88c53102d57748ef95c6bfd5ced7693e_grande.jpg" alt="Product" class="img-responsive" /></div>
+              <div class="wsk-cp-text">
+                <div class="category">
+                  <span>Drama</span>
+                </div>
+                <div class="title-product">
+                  <h3>My face not my heart cvf ggf gfg g</h3>
+                </div>
+                <div class="description-prod">
+                  <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                </div>
+                <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="row">
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img src="https://bucket.nhanh.vn/store2/61032/ps/20220421/z3356788148819_586469b23ee058c3940eb7d1a942e4ca_thumb.jpg" alt="Product" class="img-responsive" />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Ethnic</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://bucket.nhanh.vn/store2/61032/ps/20220421/z3356788148819_586469b23ee058c3940eb7d1a942e4ca_thumb.jpg" alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Introvert</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://bucket.nhanh.vn/store2/61032/ps/20220421/z3356788148819_586469b23ee058c3940eb7d1a942e4ca_thumb.jpg" alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Beauty</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://bucket.nhanh.vn/store2/61032/ps/20220421/z3356788148819_586469b23ee058c3940eb7d1a942e4ca_thumb.jpg" alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart cvf ggf gfg g</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img src="https://dongphucvina.vn/wp-content/uploads/2022/08/chat-lieu-vai-may-chan-vay.jpg" alt="Product" class="img-responsive" />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Ethnic</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://dongphucvina.vn/wp-content/uploads/2022/08/chat-lieu-vai-may-chan-vay.jpg" alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Introvert</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://dongphucvina.vn/wp-content/uploads/2022/08/chat-lieu-vai-may-chan-vay.jpg" alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Beauty</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://dongphucvina.vn/wp-content/uploads/2022/08/chat-lieu-vai-may-chan-vay.jpg" alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart cvf ggf gfg g</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img src="https://bucket.nhanh.vn/store/8686/ps/20221208/318425827_488814356686794_333265799031950511_n_thumb.jpg" alt="Product" class="img-responsive" />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Ethnic</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://bucket.nhanh.vn/store/8686/ps/20221208/318425827_488814356686794_333265799031950511_n_thumb.jpg" alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Introvert</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://bucket.nhanh.vn/store/8686/ps/20221208/318425827_488814356686794_333265799031950511_n_thumb.jpg" alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Beauty</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://bucket.nhanh.vn/store/8686/ps/20221208/318425827_488814356686794_333265799031950511_n_thumb.jpg" alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Drama</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>My face not my heart cvf ggf gfg g</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">500.000</span> vnd</div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
 
 <style>
-    .glyphicon { margin-right:5px; }
-.thumbnail
-{
-    margin-bottom: 20px;
-    padding: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
+    @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
+body{
+  font-family: 'Muli', sans-serif;
+  background:#ddd;
+}
+.shell{
+  padding:80px 0;
+}
+.wsk-cp-product{
+  background:#fff;
+  padding:15px;
+  border-radius:6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  position:relative;
+  margin:20px auto;
+}
+.wsk-cp-img{
+  position:absolute;
+  top:5px;
+  left:50%;
+  transform:translate(-50%);
+  -webkit-transform:translate(-50%);
+  -ms-transform:translate(-50%);
+  -moz-transform:translate(-50%);
+  -o-transform:translate(-50%);
+  -khtml-transform:translate(-50%);
+  width: 100%;
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.wsk-cp-img img{
+  width:100%;
+  transition: all 0.2s ease-in-out;
+  border-radius:6px;
+}
+.wsk-cp-product:hover .wsk-cp-img{
+  top:-40px;
+}
+.wsk-cp-product:hover .wsk-cp-img img{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.wsk-cp-text{
+  padding-top:150%;
+}
+.wsk-cp-text .category{
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  padding:5px;
+  margin-bottom:45px;
+  position:relative;
+  transition: all 0.2s ease-in-out;
+}
+.wsk-cp-text .category > *{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -khtml-transform: translate(-50%,-50%);
+    
+}
+.wsk-cp-text .category > span{
+  padding: 12px 30px;
+  border: 1px solid #313131;
+  background:#212121;
+  color:#fff;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius:27px;
+  transition: all 0.05s ease-in-out;
+  
+}
+.wsk-cp-product:hover .wsk-cp-text .category > span{
+  border-color:#ddd;
+  box-shadow: none;
+  padding: 11px 28px;
+}
+.wsk-cp-product:hover .wsk-cp-text .category{
+  margin-top: 0px;
+}
+.wsk-cp-text .title-product{
+  text-align:center;
+}
+.wsk-cp-text .title-product h3{
+  font-size:20px;
+  font-weight:bold;
+  margin:15px auto;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  width:100%;
+}
+.wsk-cp-text .description-prod p{
+  margin:0;
+}
+/* Truncate */
+.wsk-cp-text .description-prod {
+  text-align:center;
+  width: 100%;
+  height:62px;
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  margin-bottom:15px;
+}
+.card-footer{
+  padding: 25px 0 5px;
+  border-top: 1px solid #ddd;
+}
+.card-footer:after, .card-footer:before{
+  content:'';
+  display:table;
+}
+.card-footer:after{
+  clear:both;
 }
 
-.item.list-group-item
-{
-    float: none;
-    width: 100%;
-    background-color: #fff;
-    margin-bottom: 10px;
-}
-.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
-{
-    background: #428bca;
+.card-footer .wcf-left{
+  float:left;
+  
 }
 
-.item.list-group-item .list-group-image
-{
-    margin-right: 10px;
-}
-.item.list-group-item .thumbnail
-{
-    margin-bottom: 0px;
-}
-.item.list-group-item .caption
-{
-    padding: 9px 9px 0px 9px;
-}
-.item.list-group-item:nth-of-type(odd)
-{
-    background: #eeeeee;
+.card-footer .wcf-right{
+  float:right;
 }
 
-.item.list-group-item:before, .item.list-group-item:after
-{
-    display: table;
-    content: " ";
+.price{
+  font-size:18px;
+  font-weight:bold;
 }
 
-.item.list-group-item img
-{
-    float: left;
+a.buy-btn{
+  display:block;
+  color:#212121;
+  text-align:center;
+  font-size: 18px;
+  width:35px;
+  height:35px;
+  line-height:35px;
+  border-radius:50%;
+  border:1px solid #212121;
+  transition: all 0.2s ease-in-out;
 }
-.item.list-group-item:after
-{
-    clear: both;
+a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
+  border-color: #FF9800;
+  background: #FF9800;
+  color: #fff;
+  text-decoration:none;
 }
-.list-group-item-text
-{
-    margin: 0 0 11px;
+.wsk-btn{
+  display:inline-block;
+  color:#212121;
+  text-align:center;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  border-color: #FF9800;
+  background: #FF9800;
+  padding:12px 30px;
+  border-radius:27px;
+  margin: 0 5px;
 }
-
+.wsk-btn:hover, .wsk-btn:focus, .wsk-btn:active{
+  text-decoration:none;
+  color:#fff;
+}  
+.red{
+  color:#F44336;
+  font-size:22px;
+  display:inline-block;
+  margin: 0 5px;
+}
+@media screen and (max-width: 991px) {
+  .wsk-cp-product{
+    margin:40px auto;
+  }
+  .wsk-cp-product .wsk-cp-img{
+  top:-40px;
+}
+.wsk-cp-product .wsk-cp-img img{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+  .wsk-cp-product .wsk-cp-text .category > span{
+  border-color:#ddd;
+  box-shadow: none;
+  padding: 11px 28px;
+}
+.wsk-cp-product .wsk-cp-text .category{
+  margin-top: 0px;
+}
+a.buy-btn{
+  border-color: #FF9800;
+  background: #FF9800;
+  color: #fff;
+}
+}
 </style>
-
