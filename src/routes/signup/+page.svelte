@@ -1,5 +1,6 @@
 <script>
     import { page } from '$app/stores';
+
 </script>
 
 <div class="form">
@@ -11,17 +12,17 @@
         
         <!-- <div class="top-row"> -->
           <div class="field-wrap">
-            <label>
+            <!-- <label>
                 Email<span class="req">*</span>
-              </label>
-              <input type="email"required autocomplete="off" />
+              </label> -->
+              <input type="email"required autocomplete="off" placeholder="Email"/>
           </div>
       
           <div class="field-wrap">
-            <label>
+            <!-- <label>
                 Mật khẩu<span class="req">*</span>
-              </label>
-              <input type="password"required autocomplete="off"/>
+              </label> -->
+              <input type="password"required autocomplete="off" placeholder="Mật khẩu"/>
           </div>
         <!-- </div> -->
 

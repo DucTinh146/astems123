@@ -12,38 +12,38 @@
         
         <div class="top-row">
           <div class="field-wrap">
-            <label>
+            <!-- <label>
               Họ<span class="req">*</span>
-            </label>
-            <input type="text" required autocomplete="off" />
+            </label> -->
+            <input type="text" required autocomplete="off" placeholder="Họ"/>
           </div>
       
           <div class="field-wrap">
-            <label>
+            <!-- <label>
               Tên<span class="req">*</span>
-            </label>
-            <input type="text"required autocomplete="off"/>
+            </label> -->
+            <input type="text"required autocomplete="off" placeholder="Tên"/>
           </div>
         </div>
 
         <div class="field-wrap">
-          <label>
+          <!-- <label>
             Email<span class="req">*</span>
-          </label>
-          <input type="email"required autocomplete="off"/>
+          </label> -->
+          <input type="email"required autocomplete="off" placeholder="Email"/>
         </div>
         
         <div class="field-wrap">
-          <label>
+          <!-- <label>
             Mật khẩu<span class="req">*</span>
-          </label>
-          <input type="password"required autocomplete="off"/>
+          </label> -->
+          <input type="password"required autocomplete="off" placeholder="Mật khẩu"/>
         </div>
         <div class="field-wrap">
-          <label>
+          <!-- <label>
             Nhập lại mật khẩu<span class="req">*</span>
-          </label>
-          <input type="password"required autocomplete="off"/>
+          </label> -->
+          <input type="password"required autocomplete="off" placeholder="Nhập lại mật khẩu"/>
         </div>
         
         <button type="submit" class="button button-block">Đăng ký</button>
@@ -61,7 +61,7 @@
           <label>
             Email Address<span class="req">*</span>
           </label>
-          <input type="email"required autocomplete="off"/>
+          <input type="email"required autocomplete="off" placeholder="Email..."/>
         </div>
         
         <div class="field-wrap">
