@@ -11,9 +11,11 @@
 	"/contact": [
 		"src/routes/contact/+page.js"
 	],
+	"/login": [],
 	"/product": [
 		"src/routes/product/+page.js"
 	],
+	"/signup": [],
 	"/sverdle": [
 		"src/routes/sverdle/+page.server.js"
 	],
