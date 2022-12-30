@@ -6,6 +6,8 @@ declare namespace App {
 	// interface Locals {}
 	// interface PageData {}
 	// interface Platform {}
+
+	
 }
 import * as $ from 'jquery';
 

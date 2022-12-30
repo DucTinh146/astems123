@@ -15,6 +15,7 @@
 	"/product": [
 		"src/routes/product/+page.js"
 	],
+	"/shop": [],
 	"/signup": [],
 	"/sverdle": [
 		"src/routes/sverdle/+page.server.js"
