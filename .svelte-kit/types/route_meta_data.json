@@ -12,6 +12,7 @@
 		"src/routes/contact/+page.js"
 	],
 	"/login": [],
+	"/newyear": [],
 	"/product": [
 		"src/routes/product/+page.js"
 	],
