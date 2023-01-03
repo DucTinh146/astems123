@@ -5,6 +5,7 @@
 	"/about": [
 		"src/routes/about/+page.js"
 	],
+	"/add": [],
 	"/cart": [
 		"src/routes/cart/+page.js"
 	],
