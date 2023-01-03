@@ -13,6 +13,7 @@
 	import proc2 from '$lib/images/proc2.jpg';
 	import proc3 from '$lib/images/proc3.jpg';
 	import proc4 from '$lib/images/proc4.jpg';
+	
 
 
 

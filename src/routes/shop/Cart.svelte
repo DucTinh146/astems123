@@ -36,6 +36,7 @@
 			<div class="shop-cart">số lượng</div>
 			<p class="shop-cart">Số tiền</p>
 		</div>
+		
 	{#each $cart as item }
 		{#if item.quantity > 0}
 		<div class="cart-item">
@@ -53,8 +54,9 @@
 	{/each}
 	<div class="total">
 		<h4>Tổng thanh toán ({$cart.length} sản phẩm): {total} đ</h4>
+		
 	</div>
-	<button style="float: right;">Mua hàng</button>
+	<button style="float: right; margin: 10px;">Mua hàng</button>
 </div>
 
 
@@ -107,5 +109,6 @@
 	.cart-list {
 		border: 2px solid;
 		padding: 10px;
+		
 	}
 </style>

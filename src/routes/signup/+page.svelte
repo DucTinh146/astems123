@@ -1,102 +1,182 @@
-<script>
-    import { page } from '$app/stores';
+<script lang="ts" type="module">
+  import { page } from "$app/stores";
 
+  import { initializeApp } from "firebase/app";
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut,
+    type User,
+    signInWithPopup,
+    GoogleAuthProvider,
+    GithubAuthProvider
+  } from "firebase/auth";
+  import { onMount } from "svelte";
+
+  let email = "";
+  let password = "";
+  let user: User | null;
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDv3icGORDDrxYeRMP98iv4DXV9P_1J1u0",
+  authDomain: "shop-food-firebase.firebaseapp.com",
+  projectId: "shop-food-firebase",
+  storageBucket: "shop-food-firebase.appspot.com",
+  messagingSenderId: "748473538585",
+  appId: "1:748473538585:web:23c4ffae1b7fae8e137288"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  const login = () => {
+		const auth = getAuth(app);
+		signInWithEmailAndPassword(auth, email, password).catch((error) => {
+			const errorCode = error.code;
+			const errorMessage = error.message;
+			console.log(errorCode, errorMessage);
+		});
+	};
+
+	const loginWithGoogle = () => {
+		const auth = getAuth(app);
+		signInWithPopup(auth, new GoogleAuthProvider());
+	};
+
+	const loginWithGithub = () => {
+		const auth = getAuth(app);
+		signInWithPopup(auth, new GithubAuthProvider());
+	};
+
+	const logout = async () => {
+		const auth = getAuth(app);
+		signOut(auth);
+	};
+
+	onMount(async () => {
+		const auth = getAuth(app);
+		onAuthStateChanged(auth, (newUser) => {
+			console.log(user);
+			user = newUser;
+		});
+	});
 </script>
 
 <div class="form">
-    <div class="tab-content">
-      <div id="signup">   
+  <div class="tab-content">
+    {#if user}
+      <p>Signed in with {user.providerData[0].providerId}!</p>
+      <button on:click={logout}>Logout</button>
+    {:else}
+      <div id="signup">
         <h1>Xin chào!</h1>
-        
+
         <form action="/" method="post">
-        
-        <!-- <div class="top-row"> -->
+          <!-- <div class="top-row"> -->
           <div class="field-wrap">
             <!-- <label>
                 Email<span class="req">*</span>
               </label> -->
-              <input type="email"required autocomplete="off" placeholder="Email"/>
+            <input
+              type="email"
+              required
+              autocomplete="off"
+              placeholder="Email"
+              bind:value={email}
+            />
           </div>
-      
+
           <div class="field-wrap">
             <!-- <label>
                 Mật khẩu<span class="req">*</span>
               </label> -->
-              <input type="password"required autocomplete="off" placeholder="Mật khẩu"/>
+            <input
+              type="password"
+              required
+              autocomplete="off"
+              placeholder="Mật khẩu"
+              bind:value={password}
+            />
           </div>
-        <!-- </div> -->
+          <!-- </div> -->
 
-        <p class="forgot"><a href="#">Quên mật khẩu?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/login">Bạn chưa có tài khoản?</a></p>
-        
-        <button type="submit" class="button button-block">Đăng nhập</button>
-        
+          <p class="forgot">
+            <a href="#">Quên mật khẩu?</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/login"
+              >Bạn chưa có tài khoản?</a
+            >
+          </p>
+
+          <button type="submit" class="button button-block" on:click={login}
+            >Đăng nhập</button
+          >
         </form>
-
       </div>
-      
-      <div id="login">   
-        <h1>Welcome Back!</h1>
-        
-        <form action="/" method="post">
-        
-          <div class="field-wrap">
+    {/if}
+    <div id="login">
+      <h1>Welcome Back!</h1>
+
+      <form action="/" method="post">
+        <div class="field-wrap">
           <label>
             Email Address<span class="req">*</span>
           </label>
-          <input type="email"required autocomplete="off"/>
+          <input type="email" required autocomplete="off" />
         </div>
-        
+
         <div class="field-wrap">
           <label>
             Password<span class="req">*</span>
           </label>
-          <input type="password"required autocomplete="off"/>
+          <input type="password" required autocomplete="off" />
         </div>
-        
+
         <p class="forgot"><a href="#">Forgot Password?</a></p>
-        
+
         <button class="button button-block">Log In</button>
-        
-        </form>
+      </form>
+    </div>
+  </div>
+  <!-- tab-content -->
+</div>
 
-      </div>
-      
-    </div><!-- tab-content -->
-    
-</div> <!-- /form -->
-
+<!-- /form -->
 <style>
-*, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     box-sizing: border-box;
-}
+  }
 
-a {
+  a {
     text-decoration: none;
     color: #1ab188;
-    transition: .5s ease;
-}
-a:hover {
+    transition: 0.5s ease;
+  }
+  a:hover {
     color: #179b77;
-}
-.form {
+  }
+  .form {
     background: rgba(19, 35, 47, 0.9);
     padding: 40px;
     max-width: 600px;
     margin: 40px auto;
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-}
+  }
 
-.tab-content > div:last-child {
+  .tab-content > div:last-child {
     display: none;
-}
-h1 {
+  }
+  h1 {
     text-align: center;
     color: #ffffff;
     font-weight: 300;
     margin: 0 0 40px;
-}
-label {
+  }
+  label {
     position: absolute;
     transform: translateY(6px);
     left: 13px;
@@ -105,13 +185,13 @@ label {
     -webkit-backface-visibility: hidden;
     pointer-events: none;
     font-size: 22px;
-}
-label .req {
+  }
+  label .req {
     margin: 2px;
     color: #1ab188;
-}
+  }
 
-input {
+  input {
     font-size: 22px;
     display: block;
     width: 100%;
@@ -122,31 +202,31 @@ input {
     border: 1px solid #a0b3b0;
     color: #ffffff;
     border-radius: 0;
-    transition: border-color .25s ease, box-shadow .25s ease;
-}
-input:focus {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  input:focus {
     outline: 0;
     border-color: #1ab188;
-}
+  }
 
-.field-wrap {
+  .field-wrap {
     position: relative;
     margin-bottom: 40px;
-}
-.top-row:after {
+  }
+  .top-row:after {
     content: "";
     display: table;
     clear: both;
-}
-.top-row > div {
+  }
+  .top-row > div {
     float: left;
     width: 48%;
     margin-right: 4%;
-}
-.top-row > div:last-child {
+  }
+  .top-row > div:last-child {
     margin: 0;
-}
-.button {
+  }
+  .button {
     border: 0;
     outline: none;
     border-radius: 0;
@@ -154,22 +234,22 @@ input:focus {
     font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     background: #1ab188;
     color: #ffffff;
     transition: all 0.5s ease;
     -webkit-appearance: none;
-}
-.button:hover, .button:focus {
+  }
+  .button:hover,
+  .button:focus {
     background: #179b77;
-}
-.button-block {
+  }
+  .button-block {
     display: block;
     width: 100%;
-}
-.forgot {
+  }
+  .forgot {
     margin-top: -20px;
     text-align: right;
-}
-
+  }
 </style>
