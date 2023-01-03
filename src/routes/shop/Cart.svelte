@@ -54,6 +54,7 @@
 	<div class="total">
 		<h4>Tổng thanh toán ({$cart.length} sản phẩm): {total} đ</h4>
 	</div>
+	<button style="float: right;">Mua hàng</button>
 </div>
 
 
