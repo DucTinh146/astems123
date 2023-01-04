@@ -1,7 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	// import logo from '$lib/images/svelte-logo.svg';
-	// import github from '$lib/images/github.svg';
 	import logo from '$lib/images/123.jpg';
 	import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,9 +15,6 @@
 	</div>
 
 	<nav>
-		<!-- <svg viewBox="0 0 2 3" aria-hidden="true"> -->
-			<!-- <path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" /> -->
-		<!-- </svg> -->
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">Home</a>
@@ -39,9 +34,6 @@
 			</li>
 			<div class="input-group rounded">
 				<input type="search" class="form-control rounded" placeholder="Tìm kiếm sản phẩm...." aria-label="Search" aria-describedby="search-addon" />
-				<!-- <span class="input-group-text border-0" id="search-addon">
-				  <i class="fas fa-search"></i>
-				</span> -->
 			  </div>
 			<li>
 				<a href="/shop"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
@@ -59,21 +51,12 @@
 				  </svg></a>
 			</li>
 	
-			<li aria-current={$page.url.pathname === '/newyear' ? 'page' : undefined}>
-				<a href="/newyear">Đăng nhập</a>
+			<li aria-current={$page.url.pathname.startsWith('/signup') ? 'page' : undefined}>
+				<a href="/signup">Login</a>
 			</li>
 			
 		</ul>
-		<!-- <svg viewBox="0 0 2 3" aria-hidden="true"> -->
-			<!-- <path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" /> -->
-		<!-- </svg> -->
 	</nav>
-
-	<!-- <div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div> -->
 </header>
 
 <style>

@@ -3,85 +3,29 @@
 </script>
 
 <div class="form">
-    <div class="tab-content">
-      <div><a href="/signup">Back</a></div>
-      <div id="signup">   
-        <h1>Đăng ký tài khoản</h1>
-        
-        <form action="/" method="post">
-        
-        <div class="top-row">
-          <div class="field-wrap">
-            <!-- <label>
-              Họ<span class="req">*</span>
-            </label> -->
-            <input type="text" required autocomplete="off" placeholder="Họ"/>
-          </div>
-      
-          <div class="field-wrap">
-            <!-- <label>
-              Tên<span class="req">*</span>
-            </label> -->
-            <input type="text"required autocomplete="off" placeholder="Tên"/>
-          </div>
-        </div>
-
+  <div class="tab-content">
+    <div><a href="/signup">Back</a></div>
+    <div id="signup">   
+      <h1>Đăng ký tài khoản</h1>
+      <form action="/" method="post">
         <div class="field-wrap">
-          <!-- <label>
-            Email<span class="req">*</span>
-          </label> -->
+          <input type="text" required autocomplete="off" placeholder="Họ"/>
+        </div>
+        <div class="field-wrap">
           <input type="email"required autocomplete="off" placeholder="Email"/>
         </div>
-        
         <div class="field-wrap">
-          <!-- <label>
-            Mật khẩu<span class="req">*</span>
-          </label> -->
           <input type="password"required autocomplete="off" placeholder="Mật khẩu"/>
         </div>
         <div class="field-wrap">
-          <!-- <label>
-            Nhập lại mật khẩu<span class="req">*</span>
-          </label> -->
           <input type="password"required autocomplete="off" placeholder="Nhập lại mật khẩu"/>
         </div>
-        
-        <button type="submit" class="button button-block">Đăng ký</button>
-        
-        </form>
-
-      </div>
-      
-      <div id="login">   
-        <h1>Welcome Back!</h1>
-        
-        <form action="/" method="post">
-        
-          <div class="field-wrap">
-          <label>
-            Email Address<span class="req">*</span>
-          </label>
-          <input type="email"required autocomplete="off" placeholder="Email..."/>
-        </div>
-        
-        <div class="field-wrap">
-          <label>
-            Password<span class="req">*</span>
-          </label>
-          <input type="password"required autocomplete="off"/>
-        </div>
-        
-        <p class="forgot"><a href="#">Forgot Password?</a></p>
-        
-        <button class="button button-block">Log In</button>
-        
-        </form>
-
-      </div>
-      
-    </div><!-- tab-content -->
-    
-</div> <!-- /form -->
+        <button type="submit" class="button button-block">Đăng ký</button>  
+      </form>
+    </div>  
+    <div id="login"></div>    
+  </div>
+</div>
 
 <style>
 *, *:before, *:after {
@@ -114,20 +58,6 @@ h1 {
     font-weight: 300;
     margin: 0 0 40px;
 }
-label {
-    position: absolute;
-    transform: translateY(6px);
-    left: 13px;
-    color: rgba(255, 255, 255, 0.5);
-    transition: all 0.25s ease;
-    -webkit-backface-visibility: hidden;
-    pointer-events: none;
-    font-size: 22px;
-}
-label .req {
-    margin: 2px;
-    color: #1ab188;
-}
 
 input {
     font-size: 22px;
@@ -150,19 +80,6 @@ input:focus {
 .field-wrap {
     position: relative;
     margin-bottom: 40px;
-}
-.top-row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.top-row > div {
-    float: left;
-    width: 48%;
-    margin-right: 4%;
-}
-.top-row > div:last-child {
-    margin: 0;
 }
 .button {
     border: 0;

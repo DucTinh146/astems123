@@ -1,148 +1,43 @@
-<script lang="ts" type="module">
-  import { page } from "$app/stores";
-
-  import { initializeApp } from "firebase/app";
-  import {
-    getAuth,
-    signInWithEmailAndPassword,
-    onAuthStateChanged,
-    signOut,
-    type User,
-    signInWithPopup,
-    GoogleAuthProvider,
-    GithubAuthProvider
-  } from "firebase/auth";
-  import { onMount } from "svelte";
-
-  let email = "";
-  let password = "";
-  let user: User | null;
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDv3icGORDDrxYeRMP98iv4DXV9P_1J1u0",
-  authDomain: "shop-food-firebase.firebaseapp.com",
-  projectId: "shop-food-firebase",
-  storageBucket: "shop-food-firebase.appspot.com",
-  messagingSenderId: "748473538585",
-  appId: "1:748473538585:web:23c4ffae1b7fae8e137288"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-
-  const login = () => {
-		const auth = getAuth(app);
-		signInWithEmailAndPassword(auth, email, password).catch((error) => {
-			const errorCode = error.code;
-			const errorMessage = error.message;
-			console.log(errorCode, errorMessage);
-		});
-	};
-
-	const loginWithGoogle = () => {
-		const auth = getAuth(app);
-		signInWithPopup(auth, new GoogleAuthProvider());
-	};
-
-	const loginWithGithub = () => {
-		const auth = getAuth(app);
-		signInWithPopup(auth, new GithubAuthProvider());
-	};
-
-	const logout = async () => {
-		const auth = getAuth(app);
-		signOut(auth);
-	};
-
-	onMount(async () => {
-		const auth = getAuth(app);
-		onAuthStateChanged(auth, (newUser) => {
-			console.log(user);
-			user = newUser;
-		});
-	});
+<script>
+  let userObject = null;
+  const userbase = window.userbase;
+  let authPromise = userbase.init({appId: '7e03f771-442d-4523-b503-10b2d582c494'})
+    .then(({user}) => userObject = user)
+  let username , password ;
+  const signIn = () => authPromise = userbase.signIn({username, password}).then(user => userObject = user);
+  // const signUp = () => authPromise = userbase.signUp({username, password}).then(user => userObject = user);
+  const signOut = () => authPromise = userbase.signOut().then(() => userObject = null)
 </script>
+
 
 <div class="form">
   <div class="tab-content">
-    {#if user}
-      <p>Signed in with {user.providerData[0].providerId}!</p>
-      <button on:click={logout}>Logout</button>
-    {:else}
-      <div id="signup">
-        <h1>Xin chào!</h1>
-
-        <form action="/" method="post">
-          <!-- <div class="top-row"> -->
-          <div class="field-wrap">
-            <!-- <label>
-                Email<span class="req">*</span>
-              </label> -->
-            <input
-              type="email"
-              required
-              autocomplete="off"
-              placeholder="Email"
-              bind:value={email}
-            />
-          </div>
-
-          <div class="field-wrap">
-            <!-- <label>
-                Mật khẩu<span class="req">*</span>
-              </label> -->
-            <input
-              type="password"
-              required
-              autocomplete="off"
-              placeholder="Mật khẩu"
-              bind:value={password}
-            />
-          </div>
-          <!-- </div> -->
-
-          <p class="forgot">
-            <a href="#">Quên mật khẩu?</a
-            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/login"
-              >Bạn chưa có tài khoản?</a
-            >
-          </p>
-
-          <button type="submit" class="button button-block" on:click={login}
-            >Đăng nhập</button
-          >
-        </form>
-      </div>
-    {/if}
-    <div id="login">
-      <h1>Welcome Back!</h1>
-
-      <form action="/" method="post">
+    <div id="signup">
+      
+      {#await authPromise}Loading...{:then _}
+      {#if !userObject}
+      <h1>Hello Astems!</h1>
+      <form>
         <div class="field-wrap">
-          <label>
-            Email Address<span class="req">*</span>
-          </label>
-          <input type="email" required autocomplete="off" />
+          <input id="username" type="text" placeholder="Username" bind:value={username} />
         </div>
-
         <div class="field-wrap">
-          <label>
-            Password<span class="req">*</span>
-          </label>
-          <input type="password" required autocomplete="off" />
+          <input id="password" type="password" placeholder="Password" bind:value={password}/>
         </div>
-
-        <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-        <button class="button button-block">Log In</button>
+        <p class="forgot"><a href="/">Quên mật khẩu?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/login">Bạn chưa có tài khoản?</a></p>
+        <button  type="button" class="button button-block" on:click={signIn}>Đăng nhập</button>
       </form>
+      {:else}
+	      <h1 style="display: flex;justify-content: center; align-items: center;color:palevioletred ;width: 100%;height: 100vh; font-size: 80px;">Hi, {userObject.username.toUpperCase()}!</h1>
+	      <button style="position: absolute; top: 10px; right: 10px;background-color: gray; color: white; border: 1px solid;border-radius: 5px; font-size: 20px; cursor: pointer;" on:click={signOut}><i class="fa-solid fa-right-from-bracket"></i></button>
+      {/if}
+      {:catch error} Error! {error} {/await}
     </div>
+    <div id="login"></div>
   </div>
-  <!-- tab-content -->
 </div>
 
-<!-- /form -->
+
 <style>
   *,
   *:before,
@@ -176,20 +71,7 @@
     font-weight: 300;
     margin: 0 0 40px;
   }
-  label {
-    position: absolute;
-    transform: translateY(6px);
-    left: 13px;
-    color: rgba(255, 255, 255, 0.5);
-    transition: all 0.25s ease;
-    -webkit-backface-visibility: hidden;
-    pointer-events: none;
-    font-size: 22px;
-  }
-  label .req {
-    margin: 2px;
-    color: #1ab188;
-  }
+
 
   input {
     font-size: 22px;
@@ -213,25 +95,13 @@
     position: relative;
     margin-bottom: 40px;
   }
-  .top-row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .top-row > div {
-    float: left;
-    width: 48%;
-    margin-right: 4%;
-  }
-  .top-row > div:last-child {
-    margin: 0;
-  }
+
   .button {
     border: 0;
     outline: none;
-    border-radius: 0;
+    border-radius: 5px;
     padding: 15px 0;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -242,7 +112,8 @@
   }
   .button:hover,
   .button:focus {
-    background: #179b77;
+    background: #13d6a2;
+    color: whitesmoke;
   }
   .button-block {
     display: block;
