@@ -6,8 +6,8 @@
 
 <script>
 	// import { page } from '$app/stores';
-	import CartLength from "/file/project/astems123/src/routes/shop/CartLength.svelte";
-	import Products from "/file/project/astems123/src/routes/shop/Products.svelte";
+	import CartLength from "../shop/CartLength.svelte";
+	import Products from "../shop/Products.svelte";
 	// import Cart from "./Cart.svelte";
 	// import Address from "./Address.svelte";
 </script>

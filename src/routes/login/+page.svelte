@@ -1,27 +1,36 @@
 <script>
+  import Login from '../signup/+page.svelte'
 
+  let userObject = null;
+  const userbase = window.userbase;
+  let authPromise = userbase.init({appId: '7e03f771-442d-4523-b503-10b2d582c494'})
+    .then(({user}) => userObject = user)
+  let email, username , password ;
+  // const signIn = () => authPromise = userbase.signIn({username, password}).then(user => userObject = user);
+  const signUp = () => authPromise = userbase.signUp({email, username, password}).then(user => userObject = user);
 </script>
 
 <div class="form">
   <div class="tab-content">
     <div><a href="/signup">Back</a></div>
-    <div id="signup">   
+    <div id="signup">  
+      {#if !userObject} 
       <h1>Đăng ký tài khoản</h1>
       <form action="/" method="post">
         <div class="field-wrap">
-          <input type="text" required autocomplete="off" placeholder="Họ"/>
+          <input type="text" required autocomplete="off" placeholder="Username" bind:value={username}/>
         </div>
         <div class="field-wrap">
-          <input type="email"required autocomplete="off" placeholder="Email"/>
+          <input type="email"required autocomplete="off" placeholder="Email" bind:value={email}/>
         </div>
         <div class="field-wrap">
-          <input type="password"required autocomplete="off" placeholder="Mật khẩu"/>
+          <input type="password"required autocomplete="off" placeholder="Password" bind:value={password}/>
         </div>
-        <div class="field-wrap">
-          <input type="password"required autocomplete="off" placeholder="Nhập lại mật khẩu"/>
-        </div>
-        <button type="submit" class="button button-block">Đăng ký</button>  
+        <button type="button" class="button button-block" on:click={signUp}>Đăng ký</button>  
       </form>
+      {:else}
+      <Login/>
+      {/if}
     </div>  
     <div id="login"></div>    
   </div>

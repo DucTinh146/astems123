@@ -4,6 +4,7 @@
   let authPromise = userbase.init({appId: '7e03f771-442d-4523-b503-10b2d582c494'})
     .then(({user}) => userObject = user)
   let username , password ;
+  let error = "Username and Password are incorrect";
   const signIn = () => authPromise = userbase.signIn({username, password}).then(user => userObject = user);
   // const signUp = () => authPromise = userbase.signUp({username, password}).then(user => userObject = user);
   const signOut = () => authPromise = userbase.signOut().then(() => userObject = null)
@@ -14,7 +15,7 @@
   <div class="tab-content">
     <div id="signup">
       
-      {#await authPromise}Loading...{:then _}
+      {#await authPromise}<p style="color: white; font-size: 35px;">Loading...</p>{:then _}
       {#if !userObject}
       <h1>Hello Astems!</h1>
       <form>
@@ -28,10 +29,11 @@
         <button  type="button" class="button button-block" on:click={signIn}>Đăng nhập</button>
       </form>
       {:else}
+        <!-- <a href="/">{userObject.username.toUpperCase()}</a> -->
 	      <h1 style="display: flex;justify-content: center; align-items: center;color:palevioletred ;width: 100%;height: 100vh; font-size: 80px;">Hi, {userObject.username.toUpperCase()}!</h1>
 	      <button style="position: absolute; top: 10px; right: 10px;background-color: gray; color: white; border: 1px solid;border-radius: 5px; font-size: 20px; cursor: pointer;" on:click={signOut}><i class="fa-solid fa-right-from-bracket"></i></button>
       {/if}
-      {:catch error} Error! {error} {/await}
+      {:catch} <p style="color: red; font-size: 100px; display: flex; justify-content: center; align-items: center;">Error!</p><p style="color: white; font-size: 30px;"> {error} </p>{/await}
     </div>
     <div id="login"></div>
   </div>

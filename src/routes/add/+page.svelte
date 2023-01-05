@@ -1,6 +1,6 @@
 <script>
 	import { browser } from '$app/environment';
-	import { firebaseConfig } from '../../../../sveltekit-firebase-9-todo/src/lib/firebaseConfig.js';
+	import { firebaseConfig } from '$lib/firebaseConfig.js';
     import { initializeApp, getApps, getApp } from "firebase/app";
     import {
       getFirestore,
